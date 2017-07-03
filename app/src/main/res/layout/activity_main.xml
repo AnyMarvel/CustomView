@@ -18,4 +18,12 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_below="@id/mytitle" />
+
+    <com.view.anymarvel.view.CustomListView
+        android:id="@+id/custom_lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/counterView">
+        
+    </com.view.anymarvel.view.CustomListView>
 </RelativeLayout>
