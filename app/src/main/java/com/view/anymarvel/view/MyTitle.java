@@ -17,9 +17,6 @@ public class MyTitle extends RelativeLayout {
     private Button button;
     private TextView mTitleTv;
 
-    public MyTitle(Context context) {
-        super(context);
-    }
 
     public MyTitle(Context context, AttributeSet attrs) {
         super(context, attrs);
