@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">CustomView</string>
+    <string name="left_btn_Prompt">您点击了返回按钮</string>
 </resources>
