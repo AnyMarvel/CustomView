@@ -10,21 +10,21 @@ import android.util.AttributeSet;
 import android.view.View;
 
 import com.view.anymarvel.R;
+import com.view.anymarvel.utils.Utils;
 
 /**
  * Created by lijuntao on 17-7-4.
  */
 
 public class RainbowBar extends View {
-
     //progress bar color
     int barColor = Color.parseColor("#1E88E5");
     //every bar segment width
-    int hSpace = dip2px(getResources(), 80);
+    int hSpace;
     //every bar segment height
-    int vSpace = dip2px(getResources(), 4);
+    int vSpace;
     //space among bars
-    int space = dip2px(getResources(), 10);
+    int space;
     float startX = 0;
     float delta = 10f;
 
@@ -37,6 +37,11 @@ public class RainbowBar extends View {
 
     public RainbowBar(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
+        hSpace = Utils.dip2px(context, 80);
+        //every bar segment height
+        vSpace = Utils.dip2px(context, 4);
+        //space among bars
+        space = Utils.dip2px(context, 10);
     }
 
     public RainbowBar(Context context, AttributeSet attrs, int defStyleAttr) {
@@ -52,14 +57,6 @@ public class RainbowBar extends View {
         mPaint.setAntiAlias(true);
         mPaint.setColor(barColor);
         mPaint.setStrokeWidth(vSpace);
-    }
-
-    /**
-     * 根据手机的分辨率从 dp 的单位 转成为 px(像素)
-     */
-    public static int dip2px(Resources resource, float dpValue) {
-        final float scale = resource.getDisplayMetrics().density;
-        return (int) (dpValue * scale + 0.5f);
     }
 
 
