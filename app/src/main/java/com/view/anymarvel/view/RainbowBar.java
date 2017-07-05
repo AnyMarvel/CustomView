@@ -62,8 +62,6 @@ public class RainbowBar extends View {
         return (int) (dpValue * scale + 0.5f);
     }
 
-    //draw be invoke numbers.
-    int index = 0;
 
     @Override
     protected void onDraw(Canvas canvas) {
@@ -88,9 +86,6 @@ public class RainbowBar extends View {
         while (start >= -hSpace) {
             canvas.drawLine(start, 5, start + hSpace, 5, mPaint);
             start -= (hSpace + space);
-        }
-        if (index >= 700000) {
-            index = 0;
         }
         invalidate();
     }
