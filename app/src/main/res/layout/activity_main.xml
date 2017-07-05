@@ -1,39 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.view.anymarvel.MainActivity">
 
-    <com.view.anymarvel.view.RainbowBar
-        android:id="@+id/rainbow"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:rainbowbar_color="@android:color/holo_blue_bright"
-        app:rainbowbar_hspace="80dp"
-        app:rainbowbar_vspace="10dp" />
 
-    <com.view.anymarvel.view.MyTitle
-        android:id="@+id/mytitle"
-        android:layout_below="@id/rainbow"
+    <Button
+        android:id="@+id/button1"
         android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        android:background="@color/colorAccent">
-
-    </com.view.anymarvel.view.MyTitle>
-
-    <com.view.anymarvel.view.CounterView
-        android:id="@+id/counterView"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_below="@id/mytitle" />
-
-    <com.view.anymarvel.view.CustomListView
-        android:id="@+id/custom_lv"
-        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/counterView">
+        android:text="CustomView" />
 
-    </com.view.anymarvel.view.CustomListView>
-</RelativeLayout>
+    <Button
+        android:id="@+id/rainbow_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="rainbow_bar" />
+
+</LinearLayout>

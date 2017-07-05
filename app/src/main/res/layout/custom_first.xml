@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <com.view.anymarvel.view.MyTitle
+        android:id="@+id/mytitle"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:background="@color/colorAccent">
+
+    </com.view.anymarvel.view.MyTitle>
+
+    <com.view.anymarvel.view.CounterView
+        android:id="@+id/counterView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/mytitle" />
+
+    <com.view.anymarvel.view.CustomListView
+        android:id="@+id/custom_lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/counterView">
+
+    </com.view.anymarvel.view.CustomListView>
+</RelativeLayout>
