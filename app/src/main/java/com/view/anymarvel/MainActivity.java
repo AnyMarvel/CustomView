@@ -22,33 +22,24 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.Unbinder;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private Unbinder unbinder;
 
     @BindView(R.id.button1)
     Button button1;
     @BindView(R.id.rainbow_bar)
     Button button2;
+    @BindView(R.id.progrecessbar)
+    Button button3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         unbinder = ButterKnife.bind(this);
-        button1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, CustomFirst.class));
-            }
-        });
-        button2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, Rainbow.class));
-            }
-        });
-
-
+        button1.setOnClickListener(this);
+        button2.setOnClickListener(this);
+        button3.setOnClickListener(this);
     }
 
 
@@ -56,5 +47,22 @@ public class MainActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         unbinder.unbind();
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.button1:
+                startActivity(new Intent(MainActivity.this, CustomFirst.class));
+                break;
+            case R.id.rainbow_bar:
+                startActivity(new Intent(MainActivity.this, Rainbow.class));
+                break;
+            case R.id.progrecessbar:
+                startActivity(new Intent(MainActivity.this, NumberProgressBarActivity.class));
+                break;
+            default:
+                break;
+        }
     }
 }

@@ -18,6 +18,7 @@
         </activity>
         <activity android:name=".CustomFirst" />
         <activity android:name=".Rainbow" />
+        <activity android:name=".NumberProgressBarActivity" />
     </application>
 
 </manifest>

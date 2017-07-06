@@ -19,5 +19,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="rainbow_bar" />
+    <Button
+        android:id="@+id/progrecessbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="progrecessbar" />
+
 
 </LinearLayout>

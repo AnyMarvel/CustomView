@@ -7,7 +7,7 @@
     <com.view.anymarvel.view.MyTitle
         android:id="@+id/mytitle"
         android:layout_width="wrap_content"
-        android:layout_height="100dp"
+        android:layout_height="50dp"
         android:background="@color/colorAccent">
 
     </com.view.anymarvel.view.MyTitle>
