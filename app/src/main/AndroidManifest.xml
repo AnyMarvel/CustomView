@@ -19,6 +19,8 @@
         <activity android:name=".CustomFirst" />
         <activity android:name=".Rainbow" />
         <activity android:name=".NumberProgressBarActivity" />
+        <activity android:name=".ColckViewActivity" />
+        <!--<activity android:name=".MainActivity"/>-->
     </application>
 
 </manifest>

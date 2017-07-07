@@ -31,6 +31,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button button2;
     @BindView(R.id.progrecessbar)
     Button button3;
+    @BindView(R.id.clockView)
+    Button button4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +42,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         button1.setOnClickListener(this);
         button2.setOnClickListener(this);
         button3.setOnClickListener(this);
+        button4.setOnClickListener(this);
     }
 
 
@@ -61,6 +64,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.progrecessbar:
                 startActivity(new Intent(MainActivity.this, NumberProgressBarActivity.class));
                 break;
+            case R.id.clockView:
+                startActivity(new Intent(MainActivity.this, ColckViewActivity.class));
             default:
                 break;
         }
